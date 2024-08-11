@@ -1,5 +1,7 @@
 package com.CurrencyConverterHomework.CurrencyConverter.controller;
 
+import java.util.Map;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +22,7 @@ public class CurrencyController {
     //http://localhost:8080/currency/convertCurrency?fromCurrency=INR&toCurrency=USD&units=500
 
       @GetMapping("/convertCurrency")
-      public ResponseEntity<Double> getTheCurrencyConvertedRate(@RequestParam String fromCurrency , @RequestParam String toCurrency , @RequestParam double units){
+      public ResponseEntity<Map<String, Double>> getTheCurrencyConvertedRate(@RequestParam String fromCurrency , @RequestParam String toCurrency , @RequestParam double units){
         return ResponseEntity.ok(converterClient.getTheCurrencyConvertedRate(fromCurrency,toCurrency,units));
       }
 

@@ -1,6 +1,9 @@
 package com.CurrencyConverterHomework.CurrencyConverter.clients;
 
+import java.util.Map;
+
+
 public interface CurrencyConverterClient {
 
-    public Double getTheCurrencyConvertedRate(String fromCurrency, String toCurrency, double units);
+    public Map<String, Double> getTheCurrencyConvertedRate(String fromCurrency, String toCurrency, double units);
 }
