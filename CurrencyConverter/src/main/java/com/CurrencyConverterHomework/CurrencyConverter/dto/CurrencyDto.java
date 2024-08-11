@@ -1,4 +1,6 @@
-package com.CurrencyConverter.CurrencyConverter.Dto;
+package com.CurrencyConverterHomework.CurrencyConverter.dto;
+
+import java.util.Map;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,10 +10,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CurrencyDto {
-    
-    
-   private String CodeName;
-
-   private String name;
-
+    Map<String , Double> data;
 }
